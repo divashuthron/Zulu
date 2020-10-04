@@ -16,10 +16,18 @@ Dim strDBConnString2
 '//레알
 'strDBServerIP = "210.102.151.72,4508"
 '//테스트
-strDBServerIP = "MMSMISS"
-strDBName = "TEST"
-strDBUserID = "xteb"
-strDBPassword	= "east12!@"
+
+'//사내 데이터베이스 사용 시
+'strDBServerIP = "MMSMISS"
+'strDBName = "TEST"
+'strDBUserID = "xteb"
+'strDBPassword	= "east12!@"
+
+'//개인 데이터베이스 사용 시
+strDBServerIP = "DESKTOP-V7SJLLF"
+strDBName = "DailySupport_DB"
+strDBUserID = "DailySupport"
+strDBPassword = "Harang508!"
 
 strDBConnString = "Provider=SQLOLEDB;Data Source=" & strDBServerIP & ";Initial Catalog=" & strDBName & ";user ID=" & strDBUserID & ";password=" & strDBPassword & ";"
 '=======================================================
