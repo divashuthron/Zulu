@@ -3,13 +3,14 @@
 'Response.Expires = -1
 %>
 <!--metadata type="typelib" file="c:\program files\common files\system\ado\msado15.dll"-->
-<!--#InClude Virtual = "/test/Common/Include/DBHelperClass.asp"-->
-<!--#InClude Virtual = "/test/Common/Include/Function.CONFIG.asp" -->
-<!--#InClude Virtual = "/test/Common/Include/Function.STRING.asp" -->
-<!--#InClude Virtual = "/test/Common/Include/Function.XML.asp" -->
-<!--#InClude Virtual = "/test/Common/Include/Function.BaseCode.asp" -->
-<!--#InClude Virtual = "/test/Common/Include/Function.Log.asp" -->
-<!--#InClude Virtual = "/test/Common/Include/Function.VisitCount.asp" -->
+<!--#InClude Virtual = "/common/include/DBHelperClass.asp"-->
+<!--InClude Virtual = "/common/include/Function.RH.asp"-->
+<!--#InClude Virtual = "/common/include/Function.CONFIG.asp" -->
+<!--#InClude Virtual = "/common/include/Function.STRING.asp" -->
+<!--#InClude Virtual = "/common/include/Function.XML.asp" -->
+<!--#InClude Virtual = "/common/include/Function.BaseCode.asp" -->
+<!--#InClude Virtual = "/common/include/Function.Log.asp" -->
+<!--#InClude Virtual = "/common/include/Function.VisitCount.asp" -->
 <%
 '== 캐쉬 초기화 Proc =========================================
 Call sbNoCacheProc()

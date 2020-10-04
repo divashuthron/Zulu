@@ -67,3 +67,16 @@ input[type="checkbox"].filled-in:checked+span:not(.lever):after {
     background: linear-gradient(to right, #48286B, #333333);
     width: 100%;
 }
+
+@media(max-width: 720px) {
+    .container #loginBox {
+        left: 10%;
+        width: 80%;
+    }
+}
+
+@media(max-height: 800px) {
+    .container #loginBox {
+        height: 600px;
+    }
+}

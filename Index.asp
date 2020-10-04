@@ -1,3 +1,28 @@
+<!-- 
+@Designed By RH.BanYeoul
+
+    제약 조건
+        1. 로그인 관련
+            1-1. 아이디 입력은 6글자 이상 / 20글자 이하
+                1-1-1. 아이디는 영문(대소문자), 숫자를 제외한 다른 문자는 기입할 수 없음
+            1-2. 패스워드 입력은 6글자 이상 / 30글자 이하
+                1-2-1. 패스워드는 영문(대소문자), 숫자, 특수문자를 제외한 다른 문자는 기입할 수 없음
+        
+        2. 아이디 저장 관련
+            2-1. 아이디 저장을 체크하고 로그인을 진행할 경우, 쿠키로 아이디 저장 체크여부, 아이디 정보를 저장
+            2-2. 사용자가 Index.asp 홈페이지를 열람할 때마다 아이디 저장 체크여부 쿠키를 조회
+                2-2-1. TRUE일 경우 아이디 저장 체크 값을 checked로 설정, 쿠키 값을 통해 Input ID value 지정
+        
+        3. 자동 로그인 관련
+            3-1. 자동 로그인을 체크하고 로그인을 진행하여 성공할 경우, 쿠키로 자동 로그인 체크여부를 저장
+            3-2. 사용자가 Index.asp 홈페이지를 열람할 때마다 자동 로그인 체크여부 쿠키를 조회
+                3-2-1. TRUE일 경우 자동으로 LoginProcCookies.asp 페이지로 이동
+            3-3. 로그아웃 버튼을 누를 경우 쿠키가 삭제되고 체크가 풀려야 함
+
+    ISSUE
+        Form Submit 이벤트 고장
+ -->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -51,7 +76,7 @@
                 <a style="font-size: 48px; font-weight: bold;" href="Index.asp">Daily Support</a>
             </div>
             <div id="formBlock">
-                <form method="post" action="LoginProc.asp">
+                <form method="post" id="LoginForm" action="LoginProc.asp">
                     <div class="input-field" style="margin-top: 13%;">
                         <input type="text" class="validate" id="ds_user_id" name="ds_user_id">
                         <label class="active" id="idLabel" for="ds_user_id">ID</label>
