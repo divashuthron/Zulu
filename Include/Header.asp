@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@Language="VBScript" CODEPAGE="65001" %>
+
 <html lang="en">
   <head>
     <title>[Zulu] 일정 관리 소셜 네트워크 서비스</title>
