@@ -8,8 +8,8 @@
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="vendors/images/header_logo.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/header_logo.png">
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,6 +19,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/jvectormap/jquery-jvectormap-2.0.3.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
 
 
@@ -32,21 +33,10 @@
 		gtag('config', 'UA-119386393-1');
 	</script>
 </head>
-<body>
-    <!--
-	<div class="pre-loader">
-		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
-			<div class='loader-progress' id="progress_div">
-				<div class='bar' id='bar1'></div>
-			</div>
-			<div class='percent' id='percent1'>0%</div>
-			<div class="loading-text">
-				Loading...
-			</div>
-		</div>
-	</div>
-    -->
+<body class="header-white sidebar-light">
+	<%If Session("Master") = "" Then '관리자가 아닐 경우 페이지 로드 출력%>
+    	<!-- #InClude Virtual = "/Include/Loading.asp" -->
+	<%End If%>
 
 	<div class="header">
 		<div class="header-left">
@@ -155,29 +145,29 @@
 					</div>
 				</div>
 			</div>
-            <%If Session("Master") <> "" Then %>
+            <%'If Session("Master") <> "" Then %>
 			<div class="user-info-dropdown">
-				<div class="dropdown">
+				<div class="dropdown mr-5">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 						<span class="user-icon">
-							<img src="vendors/images/photo1.jpg" alt="">
+							<img src="vendors/images/photo3.jpg" alt="">
 						</span>
 						<span class="ml-2 user-name"><b>관리자</b></span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> 내 일정 관리</a>
 						<a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> 개인 정보 설정</a>
-                        <!--
-                        <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
+                        <!--<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>-->
 						<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Log Out</a>
-                        -->
 					</div>
 				</div>
 			</div>
+			<!--
 			<div class="github-link">
 				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg" alt=""></a>
 			</div>
-            <%End If%>
+			-->
+            <%'End If%>
 		</div>
 	</div>
 
@@ -262,9 +252,9 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="index.asp">
-				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+			<a href="Root.asp">
+				<img src="vendors/images/blank_logo2.png" alt="" class="dark-logo mx-auto">
+				<img src="vendors/images/blank_logo2.png" alt="" class="light-logo mx-auto">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
